@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+343a40
+
+Serika Dark - monkeytype.com
+Gray: 323437
+Yellow: E2B714
+White: D1D0C5
+Light Gray: 646669
+Dark Gray: 2C2E31
+
+---------------
+My colors
+Yellow: ffcb05
+
+
+
+*/
+
+
+:root {
+  --foreground: #323437;
+  --background: #D1D0C5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #323437;
+    --foreground: #D1D0C5;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
