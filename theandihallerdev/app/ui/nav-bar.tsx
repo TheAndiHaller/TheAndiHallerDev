@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/app/ui/LanguageContext';
 
-const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -54,14 +56,22 @@ const Navbar = () => {
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-12">
             <Link href="/projects" className="text-gray-300 hover:text-white ">
-              Projects
+              { language === "En" ? "Projects" : "Proyectos" }
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-white ">
-              Blog
+              { language === "En" ? "Blog" : "Blog" }
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white ">
-              About
+              { language === "En" ? "About" : "Acerca de" }
             </Link>
+          </div>
+          <div className="flex items-center ml-12">
+            <button
+              onClick={toggleLanguage}
+              className="w-10 h-10 bg-gray-700 text-white text-lg font-semibold flex items-center justify-center rounded-md hover:bg-gray-600"
+            >
+              {language}
+            </button>
           </div>
         </div>
       </div>
@@ -70,14 +80,14 @@ const Navbar = () => {
       {isOpen && (
         <div className="sm:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 text-right">
-            <Link href="/projects" className="block text-gray-300 hover:text-white mr-16">
-              Projects
+            <Link href="/projects" className="block text-gray-300 hover:text-white mr-24">
+              { language === "En" ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="block text-gray-300 hover:text-white mr-16">
-              Blog
+            <Link href="/blog" className="block text-gray-300 hover:text-white mr-24">
+              { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="block text-gray-300 hover:text-white mr-16">
-              About
+            <Link href="/about" className="block text-gray-300 hover:text-white mr-24">
+              { language === "En" ? "About" : "Acerca de" }
             </Link>
           </div>
         </div>
@@ -85,5 +95,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;
