@@ -7,10 +7,7 @@ export default function Home() {
 
   const bioEn = "I am a software developer with a passion for creating innovative and user-friendly solutions. I have a diverse background in programming, machining, customer service, education and entrepreneurship that has given me a broad range of skills and experiences. Now, as a graduate of a full stack web dev bootcamp, I am focused on taking my programming skills to the next level and landing my first job in a tech company. My diverse background has given me a unique perspective that allows me to approach challenges with creativity and innovation, and I am excited to bring this mindset to the world of software engineering.";
   const bioEs = "Soy un desarrollador de software apasionado por crear soluciones innovadoras y fáciles de usar. Tengo una trayectoria diversa en programación, mecanizado, servicio al cliente, educación y emprendimiento, lo que me ha proporcionado una amplia variedad de habilidades y experiencias. Ahora, como graduado de un bootcamp de desarrollo web Full Stack, estoy enfocado en llevar mis habilidades de programación al siguiente nivel y conseguir mi primer trabajo en una empresa tecnológica. Mi trayectoria diversa me ha brindado una perspectiva única que me permite abordar los desafíos con creatividad e innovación, y estoy emocionado de llevar esta mentalidad al mundo de la ingeniería de software.";
-
-
-
-
+  
   const { language } = useLanguage();
 
   return (
