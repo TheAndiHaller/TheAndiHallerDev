@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center h-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex justify-left h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-white font-bold text-xl mx-8">
+            <Link href="/" className="text-white font-bold text-xl mr-8">
               Andi Haller
             </Link>
           </div>
@@ -55,13 +55,13 @@ export default function Navbar() {
             </button>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-12">
-            <Link href="/projects" className="text-gray-300 hover:text-white ">
+            <Link href="/projects"  className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
               { language === "En" ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-white ">
+            <Link href="/blog" className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
               { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white ">
+            <Link href="/about" className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
               { language === "En" ? "About" : "Acerca de" }
             </Link>
           </div>
