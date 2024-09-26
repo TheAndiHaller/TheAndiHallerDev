@@ -12,16 +12,16 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[680px] mx-auto">
-        <h1>{language === "En" ? introEn : introEs}</h1>
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[600px] mx-auto">
+        <h1 className="text-xl font-bold">{language === "En" ? introEn : introEs}</h1>
         <p>{language === "En" ? bioEn : bioEs}</p>
-        <h1>Currently working on <a className='font-bold' href='https://trackeen.cl/' target='_blank' rel='noopener'>Trackeen</a></h1>
+        <h1 className="text-xl font-bold">Currently working on <a className='font-bold' href='https://trackeen.cl/' target='_blank' rel='noopener'>Trackeen</a></h1>
         <p>Trackeen is a web app that helps you keep track of your personal projects and goals. It is a work in progress and I am excited to share it with you soon!</p> 
-        <h1>More Projects:</h1>
-        <h1>Latest posts:</h1>
+        <h1 className="text-xl font-bold">More Projects:</h1>
+        <h1 className="text-xl font-bold">Latest posts:</h1>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <p>bye</p>
+        <p className='text-xs'>© 2024 Andreas Haller. All Rights Reserved.</p>
       </footer>
     </div>
   );

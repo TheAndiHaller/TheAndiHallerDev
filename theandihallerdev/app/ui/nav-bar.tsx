@@ -14,14 +14,14 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex justify-left h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-white font-bold text-xl mr-8">
+      <div className="max-w-[600px] mx-auto">
+        <div className="flex justify-end sm:justify-between w-full h-16">
+          <div className="flex items-center size-full sm:size-auto pl-6 sm:px-0">
+            <Link href="/" className="text-white font-bold text-xl pr-6 sm:px-0">
               Andi Haller
             </Link>
           </div>
-          <div className="-mr-2 flex items-center sm:hidden">
+          <div className="flex items-center sm:hidden">
             <button
               onClick={toggleMenu}
               type="button"
@@ -65,10 +65,11 @@ export default function Navbar() {
               { language === "En" ? "About" : "Acerca de" }
             </Link>
           </div>
-          <div className="flex items-center ml-12">
+          <div className="flex items-center px-6 sm:px-0">
             <button
+              type='button'
               onClick={toggleLanguage}
-              className="w-10 h-10 bg-gray-700 text-white text-lg font-semibold flex items-center justify-center rounded-md hover:bg-gray-600"
+              className="w-10 h-10 bg-gray-700 text-white text-lg font-semibold flex items-center justify-center rounded-md hover:bg-gray-600 "
             >
               {language}
             </button>
@@ -79,14 +80,14 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="sm:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 text-right">
-            <Link href="/projects" className="block text-gray-300 hover:text-white mr-24">
+          <div className="px-2 pt-2 pb-3 space-y-1 text-left bg-gray-700 rounded-md absolute top-16 right-24 opacity-90">
+            <Link href="/projects" className="block text-gray-300">
               { language === "En" ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="block text-gray-300 hover:text-white mr-24">
+            <Link href="/blog" className="block text-gray-300">
               { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="block text-gray-300 hover:text-white mr-24">
+            <Link href="/about" className="block text-gray-300">
               { language === "En" ? "About" : "Acerca de" }
             </Link>
           </div>
