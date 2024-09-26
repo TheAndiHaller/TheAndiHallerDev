@@ -24,7 +24,8 @@ export default function RootLayout({
       <LanguageProvider>
         <body className={`${ibm_plex_mono.className} antialiased`}>
           <Navbar />
-          {children}</body>
+          {children}
+          </body>
       </LanguageProvider>
     </html>
   );

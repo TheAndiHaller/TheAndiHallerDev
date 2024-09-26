@@ -1,5 +1,6 @@
 'use client';
 import { useLanguage } from '@/app/ui/LanguageContext';
+import Footer from '@/app/ui/footer';
 
 export default function Home() {
   const introEn = "Hi! My name is Andreas Haller";
@@ -20,9 +21,7 @@ export default function Home() {
         <h1 className="text-xl font-bold">More Projects:</h1>
         <h1 className="text-xl font-bold">Latest posts:</h1>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <p className='text-xs'>© 2024 Andreas Haller. All Rights Reserved.</p>
-      </footer>
+        <Footer />
     </div>
   );
 }
