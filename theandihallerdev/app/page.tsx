@@ -3,6 +3,7 @@
 import { useLanguage } from "@/app/LanguageContext";
 import Footer from "@/app/ui/footer";
 import Link from "next/link";
+import LatestProjects from "@/app/ui/latestProjects";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -78,10 +79,7 @@ export default function Home() {
             {language === "En" ? "Learn more." : "Saber más."}
           </Link>
         </p>
-        <h1 className="text-xl font-bold"> {language === "En" ? "Other projects:" : "Otros proyectos:"}</h1>
-
-        <p>Project 2</p>
-        <p>Project 3</p>
+        <LatestProjects />
         <h1 className="text-xl font-bold"> {language === "En" ? "Blog:" : "Blog:"}</h1>
         <p>Blog post 1</p>
         <p>Blog post 2</p>
