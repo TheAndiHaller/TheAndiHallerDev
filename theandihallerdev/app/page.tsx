@@ -19,14 +19,14 @@ export default function Home() {
         {language === "En" ? (
           <>
             <p>
-              I’m a <strong> programmer, maker, and designer </strong> with over
+              I&apos;m a <strong> programmer, maker, and designer </strong> with over
               six years of experience building projects, both for myself and as
               a freelancer. I thrive on learning and experimenting across
-              various fields—embracing the idea of being a "Jack of all trades,
-              master of none."
+              various fields—embracing the idea of being a &quot;Jack of all trades,
+              master of none.&quot;
             </p>
             <p>
-              Currently, I'm on a journey to make programming my full-time
+              Currently, I&apos;m on a journey to make programming my full-time
               career, seeking to carve out my place in the tech world.
             </p>
           </>
@@ -36,7 +36,7 @@ export default function Home() {
               Soy un <strong>programador, maker y diseñador</strong> con más de
               seis años de experiencia construyendo proyectos, tanto para mí
               mismo como freelancer. Disfruto aprender y experimentar en
-              diversos campos, siendo un "aprendiz de mucho, maestro de nada."
+              diversos campos, siendo un &quot;aprendiz de mucho, maestro de nada.&quot;
             </p>
             <p>
               En este momento, estoy en un camino para convertir la programación
