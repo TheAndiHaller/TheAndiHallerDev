@@ -52,3 +52,9 @@ body {
         @apply relative before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0;      
     }
 }
+
+@layer base {
+  p {
+    margin-bottom: -1rem; /* Or adjust this value as needed */
+  }
+}

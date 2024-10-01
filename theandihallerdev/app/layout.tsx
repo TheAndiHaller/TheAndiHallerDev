@@ -2,7 +2,7 @@ import '@/app/ui/global.css';
 import { ibm_plex_mono } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 import Navbar from '@/app/ui/nav-bar';
-import { LanguageProvider } from '@/app/ui/LanguageContext';
+import { LanguageProvider } from '@/app/LanguageContext';
 
 export const metadata: Metadata = {
   title: {
