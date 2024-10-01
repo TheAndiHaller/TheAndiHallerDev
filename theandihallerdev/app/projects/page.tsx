@@ -1,5 +1,4 @@
 import { getAllPosts } from '@/app/lib/actions';
-import Footer from '@/app/ui/footer';
 
 export default async function Page() {
   const posts = await getAllPosts();
@@ -16,7 +15,6 @@ export default async function Page() {
           </div>
         ))}
       </main>
-      <Footer />
     </div>
   );
 }
