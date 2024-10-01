@@ -1,27 +1,88 @@
-'use client';
-import { useLanguage } from '@/app/ui/LanguageContext';
-import Footer from '@/app/ui/footer';
+"use client";
+
+import { useLanguage } from "@/app/ui/LanguageContext";
+import Footer from "@/app/ui/footer";
+import Link from "next/link";
 
 export default function Home() {
-  const introEn = "Hi! My name is Andreas Haller";
-  const introEs = "Hola! Mi nombre es Andreas Haller";
-
-  const bioEn = "I am a software developer with a passion for creating innovative and user-friendly solutions. I have a diverse background in programming, machining, customer service, education and entrepreneurship that has given me a broad range of skills and experiences. Now, as a graduate of a full stack web dev bootcamp, I am focused on taking my programming skills to the next level and landing my first job in a tech company. My diverse background has given me a unique perspective that allows me to approach challenges with creativity and innovation, and I am excited to bring this mindset to the world of software engineering.";
-  const bioEs = "Soy un desarrollador de software apasionado por crear soluciones innovadoras y fáciles de usar. Tengo una trayectoria diversa en programación, mecanizado, servicio al cliente, educación y emprendimiento, lo que me ha proporcionado una amplia variedad de habilidades y experiencias. Ahora, como graduado de un bootcamp de desarrollo web Full Stack, estoy enfocado en llevar mis habilidades de programación al siguiente nivel y conseguir mi primer trabajo en una empresa tecnológica. Mi trayectoria diversa me ha brindado una perspectiva única que me permite abordar los desafíos con creatividad e innovación, y estoy emocionado de llevar esta mentalidad al mundo de la ingeniería de software.";
-  
   const { language } = useLanguage();
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 sm:p-20">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[600px] mx-auto">
-        <h1 className="text-xl font-bold">{language === "En" ? introEn : introEs}</h1>
-        <p>{language === "En" ? bioEn : bioEs}</p>
-        <h1 className="text-xl font-bold">Currently working on <a className='font-bold' href='https://trackeen.cl/' target='_blank' rel='noopener'>Trackeen</a></h1>
-        <p>Trackeen is a web app that helps you keep track of your personal projects and goals. It is a work in progress and I am excited to share it with you soon!</p> 
-        <h1 className="text-xl font-bold">More Projects:</h1>
-        <h1 className="text-xl font-bold">Latest posts:</h1>
+        {language === "En" ? (
+          // eslint-disable-next-line react/no-unescaped-entities
+          <h1 className=" text-xl font-bold">Hi! I'm Andi</h1>
+        ) : (
+          <h1 className="text-xl font-bold">¡Hola! Soy Andi</h1>
+        )}
+        {language === "En" ? (
+          <>
+            <p>
+              I’m a <strong> programmer, maker, and designer </strong> with over
+              six years of experience building projects, both for myself and as
+              a freelancer. I thrive on learning and experimenting across
+              various fields—embracing the idea of being a "Jack of all trades,
+              master of none."
+            </p>
+            <p>
+              Currently, I'm on a journey to make programming my full-time
+              career, seeking to carve out my place in the tech world.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Soy un <strong>programador, maker y diseñador</strong> con más de
+              seis años de experiencia construyendo proyectos, tanto para mí
+              mismo como freelancer. Disfruto aprender y experimentar en
+              diversos campos, siendo un "aprendiz de mucho, maestro de nada."
+            </p>
+            <p>
+              En este momento, estoy en un camino para convertir la programación
+              en mi carrera a tiempo completo, buscando forjar mi lugar en el
+              mundo de la tecnología.
+            </p>
+          </>
+        )}
+
+        <h1 className="text-xl font-bold">
+          {language === "En" ? "Working on " : "Projecto actual "}
+          <a
+            className="font-bold text-underline"
+            href="https://trackeen.cl/"
+            target="_blank"
+            rel="noopener"
+          >
+            Trackeen
+          </a>
+        </h1>
+        <p>
+          {language === "En" ? (
+            <span>
+              Trackeen is a device designed to help you monitor your habits and
+              track your personal growth through insightful data.
+            </span>
+          ) : (
+            <span>
+              Trackeen es un dispositivo diseñado para ayudarte a monitorear tus
+              hábitos y seguir tu crecimiento personal a través de datos
+              informativos. 
+            </span>
+          )}
+          <br />
+          <Link
+            href="/projects"
+            className="text-gray-300 font-bold text-underline "
+          >
+            {language === "En" ? "Learn more." : "Saber más."}
+          </Link>
+        </p>
+        <h1 className="text-xl font-bold"> {language === "En" ? "Other projects:" : "Otros proyectos:"}</h1>
+        <p>Project 2</p>
+        <p>Project 3</p>
       </main>
-        <Footer />
+      <Footer />
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex justify-end sm:justify-between w-full h-16">
           <div className="flex items-center size-full sm:size-auto pl-6 sm:px-0">
             <Link href="/" className="text-white font-bold text-xl pr-6 sm:px-0">
-              Andi Haller
+              TheAndiHaller
             </Link>
           </div>
           <div className="flex items-center sm:hidden">
@@ -55,13 +55,13 @@ export default function Navbar() {
             </button>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-12">
-            <Link href="/projects"  className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
+            <Link href="/projects"  className="text-gray-300 text-underline">
               { language === "En" ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
+            <Link href="/blog" className="text-gray-300 text-underline">
               { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="relative text-gray-300 before:absolute before:bg-gray-300 before:h-[2px] before:w-0 before:left-1/2 before:bottom-0 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0">
+            <Link href="/about" className="text-gray-300 text-underline">
               { language === "En" ? "About" : "Acerca de" }
             </Link>
           </div>

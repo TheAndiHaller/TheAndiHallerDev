@@ -7,6 +7,7 @@
 - Postgres
 - Tailwind
 - Marked
+- ClsxS
 
 ## Todo:
 - [x] Setup Git / Vercel
