@@ -4,7 +4,7 @@ import Socials from "./ui/socials";
 
 export default function Home() {
   return (
-    <main>
+    <main className="sm:px-0 px-4">
       <Bio />
       <Socials />
       <WorkingOn />

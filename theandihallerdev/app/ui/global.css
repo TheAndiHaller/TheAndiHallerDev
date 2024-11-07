@@ -24,16 +24,18 @@ Yellow: ffcb05
 
 
 :root {
-  --foreground: #323437;
-  --background: #D1D0C5;
+  --background: #323437;
+  --foreground: #D1D0C5;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #323437;
     --foreground: #D1D0C5;
   }
 }
+*/
 
 body {
   color: var(--foreground);
