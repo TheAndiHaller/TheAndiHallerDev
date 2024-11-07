@@ -7,7 +7,7 @@ export default function Page() {
   const { language } = useLanguage();
 
   return (
-    <main>
+    <main className="sm:px-0 px-4">
       {language === "En" ? (
         <div>
           <h1 className="text-xl font-bold">
