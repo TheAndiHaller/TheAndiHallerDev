@@ -6,13 +6,13 @@ export default function Bio() {
   const { language } = useLanguage();
 
   return (
-    <div>
+    <div className="mb-10">
       <h1 className=" text-xl font-bold pb-4">
         {language === "En" ? "Hi! I'm Andi" : "¡Hola! Soy Andi"}
       </h1>
       {language === "En" ? (
         <div>
-          <p>
+          <p className="mb-5">
             I&apos;m a <strong> programmer, maker, and designer </strong> with
             over six years of experience building projects, both for myself and
             as a freelancer. I thrive on learning and experimenting across
@@ -26,7 +26,7 @@ export default function Bio() {
         </div>
       ) : (
         <div>
-          <p>
+          <p className="mb-5">
             Soy un <strong>programador, maker y diseñador</strong> con más de
             seis años de experiencia construyendo proyectos, tanto para mí mismo
             como freelancer. Disfruto aprender y experimentar en diversos

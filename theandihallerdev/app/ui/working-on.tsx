@@ -1,7 +1,6 @@
 'use client';
 
 import { useLanguage } from "@/app/LanguageContext";
-import Link from "next/link";
 
 export default function WorkingOn() {
   const { language } = useLanguage();
@@ -19,7 +18,7 @@ export default function WorkingOn() {
           Trackeen
         </a>
       </h1>
-      <p>
+      <p className="mb-4">
         {language === "En" ? (
           <span>
             Trackeen is a device designed to help you monitor your habits and
@@ -33,13 +32,15 @@ export default function WorkingOn() {
           </span>
         )}
         <br />
-        <Link
-          href="/projects"
-          className="text-gray-300 font-bold text-underline "
-        >
-          {language === "En" ? "Learn more." : "Saber más."}
-        </Link>
       </p>
+      <a
+        className="font-bold text-underline"
+        href="https://trackeen.cl/"
+        target="_blank"
+        rel="noopener"
+      >
+        {language === "En" ? "Visit Trackeen" : "Visitar Trackeen"}
+      </a>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Navbar from "@/app/ui/nav-bar";
 import { LanguageProvider } from "@/app/LanguageContext";
 import Footer from "@/app/ui/footer";
+import Container from "@/app/ui/container";
 
 export const metadata: Metadata = {
   title: {
@@ -22,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <LanguageProvider>
-        <body className={`${ibm_plex_mono.className} antialiased`}>
+        <body className={`${ibm_plex_mono.className} antialiased min-h-screen`}>
+        <Container>
           <Navbar />
           {children}
           <Footer />
+        </Container>
         </body>
       </LanguageProvider>
     </html>

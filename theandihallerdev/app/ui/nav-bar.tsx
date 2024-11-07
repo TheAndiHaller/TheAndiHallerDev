@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="max-w-[600px] mx-auto">
+      <div className="max-w-[600px] mx-auto mb-24">
         <div className="flex justify-end sm:justify-between w-full h-16">
           <div className="flex items-center size-full sm:size-auto pl-6 sm:px-0">
             <Link href="/" className="text-white font-bold text-xl pr-6 sm:px-0">
@@ -61,8 +61,8 @@ export default function Navbar() {
             <Link href="/blog" className="text-gray-300 text-underline">
               { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="text-gray-300 text-underline">
-              { language === "En" ? "About" : "Acerca de" }
+            <Link href="/resume" className="text-gray-300 text-underline">
+              { language === "En" ? "Resume" : "Mi CV" }
             </Link>
           </div>
           <div className="flex items-center px-6 sm:px-0">
@@ -87,8 +87,8 @@ export default function Navbar() {
             <Link href="/blog" className="block text-gray-300">
               { language === "En" ? "Blog" : "Blog" }
             </Link>
-            <Link href="/about" className="block text-gray-300">
-              { language === "En" ? "About" : "Acerca de" }
+            <Link href="/resume" className="block text-gray-300">
+              { language === "En" ? "Resume" : "Mi CV" }
             </Link>
           </div>
         </div>
