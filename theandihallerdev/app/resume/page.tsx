@@ -10,18 +10,20 @@ export default function Page() {
     <main>
       {language === "En" ? (
         <div>
-          <h1 className="text-xl font-bold">My resume</h1>
-          <a href="/files/resume_en.pdf" download>
-            Download PDF
-          </a>
+          <h1 className="text-xl font-bold">
+            <a href="/files/Andreas Haller Full Stack Web Developer resume.pdf" download>
+              Download PDF
+            </a>
+          </h1>
           <MarkdownRenderer filePath={0} />
         </div>
       ) : (
         <div>
-          <h1 className="text-xl font-bold">Mi CV</h1>
-          <a href="/files/resume_es.pdf" download>
-            Descargar PDF
-          </a>
+          <h1 className="text-xl font-bold">
+            <a href="/files/Andreas Haller Full Stack Web Developer CV.pdf" download>
+              Descargar PDF
+            </a>
+          </h1>
           <MarkdownRenderer filePath={1} />
         </div>
       )}
