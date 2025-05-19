@@ -2,7 +2,6 @@ import "@/app/ui/global.css";
 import { ibm_plex_mono } from "@/app/ui/fonts";
 import { Metadata } from "next";
 import Navbar from "@/app/ui/nav-bar";
-import { LanguageProvider } from "@/app/LanguageContext";
 import Footer from "@/app/ui/footer";
 import Container from "@/app/ui/container";
 
@@ -22,15 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <LanguageProvider>
-        <body className={`${ibm_plex_mono.className} antialiased min-h-screen`}>
-        <Container>
-          <Navbar />
-          {children}
-          <Footer />
-        </Container>
-        </body>
-      </LanguageProvider>
+      <body className={`${ibm_plex_mono.className} antialiased min-h-screen`}>
+      <Container>
+        <Navbar />
+        {children}
+        <Footer /> 
+      </Container>
+      </body>
     </html>
   );
 }

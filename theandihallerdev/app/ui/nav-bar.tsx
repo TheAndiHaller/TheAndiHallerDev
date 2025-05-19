@@ -2,11 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useLanguage } from '@/app/LanguageContext';
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const asPath = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
-  const { language, toggleLanguage } = useLanguage();
+
+  const isSpanish = asPath.startsWith('/es');
+    // Handle homepage explicitly
+    const togglePath = isSpanish
+      ? asPath === '/es'
+        ? '/' // Spanish homepage to English homepage
+        : asPath.replace('/es', '') // Other Spanish pages to English
+      : asPath === '/'
+        ? '/es' // English homepage to Spanish homepage
+        : `/es${asPath}`; // Other English pages to Spanish
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-[600px] mx-auto mb-24">
         <div className="flex justify-end sm:justify-between w-full h-16">
           <div className="flex items-center size-full sm:size-auto pl-6 sm:px-0">
-            <Link href="/" className="text-white font-bold text-xl pr-6 sm:px-0">
+            <Link href={ !isSpanish ? "/" : "/es" } className="text-white font-bold text-xl pr-6 sm:px-0">
               TheAndiHaller
             </Link>
           </div>
@@ -55,24 +66,24 @@ export default function Navbar() {
             </button>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-12">
-            <Link href="/projects"  className="text-gray-300 text-underline">
-              { language === "En" ? "Projects" : "Proyectos" }
+            <Link href={ !isSpanish ? "/projects" : "/es/projects" }  className="text-gray-300 text-underline">
+              { !isSpanish ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="text-gray-300 text-underline">
-              { language === "En" ? "Blog" : "Blog" }
+            <Link href={ !isSpanish ? "/blog" : "/es/blog" } className="text-gray-300 text-underline">
+              { !isSpanish ? "Blog" : "Blog" }
             </Link>
-            <Link href="/resume" className="text-gray-300 text-underline">
-              { language === "En" ? "Resume" : "Mi CV" }
+            <Link href={ !isSpanish ? "/resume" : "/es/resume" } className="text-gray-300 text-underline">
+              { !isSpanish ? "Resume" : "Mi CV" }
             </Link>
           </div>
           <div className="flex items-center px-6 sm:px-0">
-            <button
+            <Link
               type='button'
-              onClick={toggleLanguage}
+              href={togglePath}
               className="w-10 h-10 bg-gray-700 text-white text-lg font-semibold flex items-center justify-center rounded-md hover:bg-gray-600 "
             >
-              {language}
-            </button>
+              {!isSpanish ? "Es" : "En" }
+            </Link>
           </div>
         </div>
       </div>
@@ -81,14 +92,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="sm:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 text-left bg-gray-700 rounded-md absolute top-16 right-24 opacity-90">
-            <Link href="/projects" className="block text-gray-300">
-              { language === "En" ? "Projects" : "Proyectos" }
+            <Link href={ !isSpanish ? "/projects" : "/es/projects" } className="block text-gray-300">
+              { !isSpanish ? "Projects" : "Proyectos" }
             </Link>
-            <Link href="/blog" className="block text-gray-300">
-              { language === "En" ? "Blog" : "Blog" }
+            <Link href={ !isSpanish ? "/blog" : "/es/blog" } className="block text-gray-300">
+              { !isSpanish ? "Blog" : "Blog" }
             </Link>
-            <Link href="/resume" className="block text-gray-300">
-              { language === "En" ? "Resume" : "Mi CV" }
+            <Link href={ !isSpanish ? "/resume" : "/es/resume" } className="block text-gray-300">
+              { !isSpanish ? "Resume" : "Mi CV" }
             </Link>
           </div>
         </div>

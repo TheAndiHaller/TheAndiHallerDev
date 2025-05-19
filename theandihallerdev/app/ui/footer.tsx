@@ -1,8 +1,7 @@
 "use client";
-import { useLanguage } from "@/app/LanguageContext";
 
 export default function Footer() {
-  const { language } = useLanguage();
+  const language = "En";
 
   return (
     <footer className="mt-auto text-center">
