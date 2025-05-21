@@ -1,14 +1,18 @@
-"use client";
+'use client';
+
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const language = "En";
+  const asPath = usePathname();
+
+  const isSpanish = asPath.startsWith('/es');
 
   return (
     <footer className="mt-auto text-center">
       <p className="text-xs mb-8">
-        {language === "En"
-          ? "© 2024 Andreas Haller. All Rights Reserved."
-          : "© 2024 Andreas Haller. Todos los derechos reservados. "}
+        {isSpanish
+          ? "© 2024 Andreas Haller. Todos los derechos reservados. "
+          : "© 2024 Andreas Haller. All Rights Reserved."}
       </p>
     </footer>
   );
