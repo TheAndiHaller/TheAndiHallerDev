@@ -1,30 +1,30 @@
-import Socials from "./ui/socials";
+import Socials from "../ui/socials";
 
 export default function Home() {
   return (
     <main className="sm:px-0 px-4">
       <div className="mb-10">
         <h1 className=" text-xl font-bold pb-4">
-          {"Hi! I'm Andi"}
+          {"¡Hola! Soy Andi"}
         </h1>
         <div>
           <p className="mb-5">
-            I&apos;m a <strong> programmer, maker, and designer </strong> with
-            over six years of experience building projects, both for myself and
-            as a freelancer. I thrive on learning and experimenting across
-            various fields—embracing the idea of being a &quot;Jack of all
-            trades, master of none.&quot;
+            Soy un <strong>programador, maker y diseñador</strong> con más de
+            seis años de experiencia construyendo proyectos, tanto para mí mismo
+            como freelancer. Disfruto aprender y experimentar en diversos
+            campos, siendo un &quot;aprendiz de mucho, maestro de nada.&quot;
           </p>
           <p>
-            Currently, I&apos;m on a journey to make programming my full-time
-            career, seeking to carve out my place in the tech world.
+            En este momento, estoy en un camino para convertir la programación
+            en mi carrera a tiempo completo, buscando forjar mi lugar en el
+            mundo de la tecnología.
           </p>
         </div>
       </div>
       {<Socials />}
       <div className="pb-10">
         <h1 className="text-xl font-bold pb-4">
-          {"Working on "}
+          {"Projecto actual "}
           <a
             className="font-bold text-underline"
             href="https://trackeen.cl/"
@@ -36,8 +36,9 @@ export default function Home() {
         </h1>
         <p className="mb-4">
           <span>
-            Trackeen is a device designed to help you monitor your habits and
-            track your personal growth through insightful data.
+            Trackeen es un dispositivo diseñado para ayudarte a monitorear tus
+            hábitos y seguir tu crecimiento personal a través de datos
+            informativos.
           </span>
           <br />
         </p>
@@ -47,7 +48,7 @@ export default function Home() {
           target="_blank"
           rel="noopener"
         >
-          Visit Trackeen
+          {"Visitar Trackeen"}
         </a>
       </div>
     </main>

@@ -42,27 +42,3 @@ export default function Socials() {
     </div>
   );
 }
-
-/*
-<div class="social-btn-container">
-<button
-  aria-label="Linkedin"
-  class="social-link-btn"
-  onclick="window.open('https://www.linkedin.com/in/andreas-haller-schade/')"
->
-  <i class="bx bxl-linkedin bx-md social-link-icon"></i>
-</button>
-<button class="social-link-btn" onclick="window.open('https://github.com/TheAndiHaller')">
-  <i class="bx bxl-github bx-md social-link-icon"></i>
-</button>
-<button
-  class="social-link-btn"
-  onclick="window.open('https://www.instagram.com/theandihaller/')"
->
-  <i class="bx bxl-instagram bx-md social-link-icon"></i>
-</button>
-<button class="social-link-btn" onclick="window.open('https://twitter.com/TheAndiHaller')">
-  <i class="bx bxl-twitter bx-md social-link-icon"></i>
-</button>
-</div>
-*/

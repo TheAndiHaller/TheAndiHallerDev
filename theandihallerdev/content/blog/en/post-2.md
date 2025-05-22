@@ -1,6 +1,8 @@
 ---
-title: My Secound Blog Post
-date: 2025-05-08
+title: My Secound Post
+date: 2025-05-09
 slug: post-2
+description: 
+image:
 ---
-This is the content of my blog post...
+This is an English blog post.
