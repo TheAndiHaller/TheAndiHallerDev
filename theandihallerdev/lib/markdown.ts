@@ -5,12 +5,12 @@ import { remark } from "remark";
 import html from "remark-html";
 
 export interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  content: string;
-  description: string;
-  image: string;
+  slug: String;
+  title: String;
+  date: String;
+  content: String;
+  description: String;
+  image: String;
 }
 
 export async function getPost(type: "blog" | "projects", lang: "en" | "es", slug: string): Promise<Post> {
@@ -63,7 +63,7 @@ export function getAllPostSlugs(type: "blog" | "projects", lang: "en" | "es"): {
 export async function getResume( lang: "en" | "es"): Promise<String> {
   const filePath = path.join(process.cwd(), "content", "resume", lang, "resume.md");
   const fileContents = fs.readFileSync(filePath, "utf8");
-  const { data, content } = matter(fileContents);
+  const { content } = matter(fileContents);
 
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();

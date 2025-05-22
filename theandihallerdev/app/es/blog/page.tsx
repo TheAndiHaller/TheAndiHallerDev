@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPosts, Post } from "../../../lib/markdown";
+import { getAllPosts } from "../../../lib/markdown";
 
 export default async function Blog() {
   const posts = getAllPosts("blog", "es");

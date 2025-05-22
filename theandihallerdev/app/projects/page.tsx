@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPosts, Post } from "../../lib/markdown";
+import { getAllPosts } from "../../lib/markdown";
 
 export default async function Blog() {
   const posts = getAllPosts("projects", "en");

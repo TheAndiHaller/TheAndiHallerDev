@@ -3,8 +3,8 @@ import { IconName } from "boxicons";
 
 interface IconProps {
   name: IconName;
-  size?: string;
-  color?: string;
+  size?: String;
+  color?: String;
 }
 
 const Icon: React.FC<IconProps> = ({ name, size = "24px", color = "" }) => {
