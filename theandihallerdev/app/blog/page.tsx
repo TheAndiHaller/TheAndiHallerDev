@@ -1,19 +1,19 @@
 import Link from "next/link";
-import { getAllPosts, Post } from "../lib/markdown";
+import { getAllPosts, Post } from "../../lib/markdown";
 
 export default async function Blog() {
-  const posts = getAllPosts("en");
+  const posts = getAllPosts("blog", "en");
 
   return (
     <div>
-      <h2 className="text-xl mb-4">Blog</h2>
+      <h2 className="text-xl font-bold mb-4">Blog</h2>
       <ul>
         {posts.map((post) => (
           <li key={post.slug} className="mb-2">
-            <Link href={`/blog/${post.slug}`} className="text-blue-600">
+            <Link href={`/blog/${post.slug}`} className="font-bold">
               {post.title}
             </Link>
-            <span className="text-gray-500"> - {new Date (post.date).toString()}</span>
+            <span className="text-gray-500"> - {new Date (post.date).toISOString().split('T')[0]}</span>
           </li>
         ))}
       </ul>
