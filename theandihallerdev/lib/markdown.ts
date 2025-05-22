@@ -9,6 +9,8 @@ export interface Post {
   title: string;
   date: string;
   content: string;
+  description: string;
+  image: string;
 }
 
 export async function getPost(type: "blog" | "projects", lang: "en" | "es", slug: string): Promise<Post> {
@@ -24,6 +26,8 @@ export async function getPost(type: "blog" | "projects", lang: "en" | "es", slug
     title: data.title,
     date: data.date,
     content: contentHtml,
+    description: data.description,
+    image: data.image,
   };
 }
 
@@ -40,6 +44,8 @@ export function getAllPosts(type: "blog" | "projects", lang: "en" | "es"): Post[
         title: data.title,
         date: data.date,
         content: "",
+        description: data.description,
+        image: data.image,
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -61,9 +67,6 @@ export async function getResume( lang: "en" | "es"): Promise<String> {
 
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
-
-  console.log("Path: ", filePath);
-  console.log("Content: ", content);
 
   return contentHtml;
 }

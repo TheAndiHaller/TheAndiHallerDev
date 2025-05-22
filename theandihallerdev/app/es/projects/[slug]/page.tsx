@@ -1,13 +1,25 @@
+import Link from "next/link";
 import { getPost, getAllPostSlugs } from "../../../../lib/markdown";
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
   const post = await getPost("projects", "es", params.slug);
 
   return (
-    <div>
-      <h2 className="text-xl mb-4">{post.title}</h2>
-      <p className="text-gray-500 mb-4">{ new Date(post.date).toISOString().split('T')[0] }</p>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: post.content }} />
+    <div className="mb-8">
+      <Link
+        key="Back"
+        href="/es/projects"
+      >
+        Volver a Proyectos
+      </Link>
+      <h1 className="text-2xl my-8 font-bold">{post.title}</h1>
+      <div className="my-4 prose" dangerouslySetInnerHTML={{ __html: post.content }} />
+      <Link
+        key="Back"
+        href="/es/projects"
+      >
+        Volver a Proyectos
+      </Link>
     </div>
   );
 }
