@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "../../../lib/markdown";
 
 export default async function Blog() {
@@ -7,16 +8,28 @@ export default async function Blog() {
   return (
     <div>
       <h2 className="text-xl font-bold mb-4">Blog</h2>
-      <ul>
+      <div className="space-y-6">
         {posts.map((post) => (
-          <li key={post.slug} className="mb-2">
-            <Link href={`/es/blog/${post.slug}`} className="font-bold">
-              {post.title}
-            </Link>
-            <span className="text-gray-500"> - {new Date (post.date).toISOString().split('T')[0]}</span>
-          </li>
+          <Link
+            key={post.slug}
+            href={`/es/blog/${post.slug}`}
+            className="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow  flex items-center"
+          >
+            <div className="flex-1 p-4">
+              <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
+              <p className="text-gray-300 mb-2">{post.description}</p>
+            </div>
+            <div className="w-48 h-32 relative">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
