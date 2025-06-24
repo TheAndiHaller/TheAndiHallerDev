@@ -4,15 +4,8 @@ import { Metadata } from "next";
 import Navbar from "@/app/ui/nav-bar";
 import Footer from "@/app/ui/footer";
 import Container from "@/app/ui/container";
+import Hotjar from "@/app/ui/hotjar";
 
-/*
-import Hotjar from '@hotjar/browser';
-
-const siteId = 6443751;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
-*/
 export const metadata: Metadata = {
   title: {
     template: "%s | The Andi Haller",
@@ -30,11 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibm_plex_mono.className} antialiased min-h-screen`}>
-      <Container>
-        <Navbar />
-        {children}
-        <Footer /> 
-      </Container>
+        <Hotjar />
+        <Container>
+          <Navbar />
+          {children}
+          <Footer /> 
+        </Container>
       </body>
     </html>
   );
