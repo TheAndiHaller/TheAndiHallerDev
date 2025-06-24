@@ -4,8 +4,13 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    hj: any;
-    _hjSettings: any;
+    hj: ((...args: unknown[]) => void) & {
+      q?: unknown[][];
+    };
+    _hjSettings: {
+      hjid: number;
+      hjsv: number;
+    };
   }
 }
 
@@ -17,14 +22,14 @@ export default function Hotjar() {
       const hotjarVersion = 6;
 
       // Initialize Hotjar
-      (function(h: any, o: any, t: any, j: any, a?: any, r?: any) {
-        h.hj = h.hj || function() {
-          (h.hj.q = h.hj.q || []).push(arguments);
+      (function(h: Window, o: Document, t: string, j: string, a?: HTMLElement, r?: HTMLScriptElement) {
+        h.hj = h.hj || function(...args: unknown[]) {
+          (h.hj.q = h.hj.q || []).push(args);
         };
         h._hjSettings = { hjid: siteId, hjsv: hotjarVersion };
         a = o.getElementsByTagName('head')[0];
         r = o.createElement('script');
-        r.async = 1;
+        r.async = true;
         r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
