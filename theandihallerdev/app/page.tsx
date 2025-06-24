@@ -22,6 +22,7 @@ export default function Home() {
         </div>
       </div>
       {<Socials />}
+      { /*  
       <div className="pb-10">
         <h1 className="text-xl font-bold pb-4">
           {"Working on "}
@@ -49,7 +50,7 @@ export default function Home() {
         >
           Visit Trackeen
         </a>
-      </div>
+      </div>*/}
     </main>
   );
 }
