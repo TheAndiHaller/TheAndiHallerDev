@@ -5,6 +5,7 @@ import Navbar from "@/app/ui/nav-bar";
 import Footer from "@/app/ui/footer";
 import Container from "@/app/ui/container";
 import Hotjar from "@/app/ui/hotjar";
+import GoogleAnalytics from "@/app/ui/google-analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
     default: "The Andi Haller",
   },
   description: "The official web of Andi Haller",
-  metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
+  metadataBase: new URL("https://theandihaller.com"),
+  alternates: {
+    canonical: "https://theandihaller.com/",
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibm_plex_mono.className} antialiased min-h-screen`}>
+        <GoogleAnalytics />
         <Hotjar />
         <Container>
           <Navbar />
