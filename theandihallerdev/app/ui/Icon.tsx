@@ -5,10 +5,11 @@ interface IconProps {
   name: IconName;
   size?: string;
   color?: string;
+  className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, size = "24px", color = "" }) => {
-  return <i className={`bx ${name}`} style={{ fontSize: size, color }} />;
+const Icon: React.FC<IconProps> = ({ name, size = "24px", color = "", className = "" }) => {
+  return <i className={`bx ${name} ${className}`} style={{ fontSize: size, color }} />;
 };
 
 export default Icon;
