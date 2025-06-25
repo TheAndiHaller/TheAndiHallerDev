@@ -1,4 +1,13 @@
 import { getResume } from "../../lib/markdown";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Resume - TheAndiHaller',
+  description: 'Know my professional experience and skills.',
+  alternates: {
+    canonical: 'https://theandihaller.com/resume',
+  },
+};
 
 export default async function ResumePage() {
   const resume = await getResume("en");
