@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "../../lib/markdown";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog - TheAndiHaller',
+  description: 'My blog.',
+  alternates: {
+    canonical: 'https://theandihaller.com/blog',
+  },
+};
 
 export default async function Blog() {
   const posts = getAllPosts("blog", "en");

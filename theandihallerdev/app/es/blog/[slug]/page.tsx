@@ -1,5 +1,21 @@
 import Link from "next/link";
 import { getPost, getAllPostSlugs } from "../../../../lib/markdown";
+import { Metadata } from 'next';
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug;
+
+  return {
+    title: `Post: ${slug}`,
+    alternates: {
+      canonical: `https://theandihaller.com/es/blog/${slug}`,
+    },
+  };
+}
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
   const post = await getPost("blog", "es", params.slug);

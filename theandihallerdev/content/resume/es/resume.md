@@ -1,7 +1,7 @@
 # Andreas Haller  
-### Full Stack Web Developer | Software Developer  
+## Full Stack Web Developer | Software Developer  
 
-### [LinkedIn](https://www.linkedin.com/in/andreas-haller-schade/) - [GitHub](https://github.com/TheAndiHaller) - [Website](https://theandihaller.com/)
+## [LinkedIn](https://www.linkedin.com/in/andreas-haller-schade/) - [GitHub](https://github.com/TheAndiHaller) - [Website](https://theandihaller.com/)
 
 ---
 
