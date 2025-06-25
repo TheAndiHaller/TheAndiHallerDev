@@ -8,7 +8,7 @@ export default function Footer() {
   const isSpanish = asPath.startsWith('/es');
 
   return (
-    <footer className="mt-auto text-center">
+    <footer className="mt-auto pt-8 text-center">
       <p className="text-xs mb-8">
         {isSpanish
           ? "© 2024 Andreas Haller. Todos los derechos reservados. "

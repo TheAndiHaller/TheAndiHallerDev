@@ -29,7 +29,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         Back to Blog
       </Link>
       <h2 className="text-2xl mt-8 font-bold">{post.title}</h2>
-      <p className="text-gray-500 mb-4">{new Date(post.date).toISOString().split('T')[0]}</p>
+      <p className="text-gray-300 mb-4">{new Date(post.date).toISOString().split('T')[0]}</p>
       <div className="my-4 prose" dangerouslySetInnerHTML={{ __html: post.content }} />
       <Link
         key="Back"
