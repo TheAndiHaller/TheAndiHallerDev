@@ -6,7 +6,7 @@ description: Aplicación full-Stack construida con IA, desde el frontend al firm
 image: https://res.cloudinary.com/dzdh345nq/image/upload/v1750710512/greenhouse_q4ak1w.png
 ---
 
-#### Acabo de construir un sistema IoT full-stack — desde el frontend hasta el firmware de Arduino — en solo unas horas, y casi no escribí código
+#### Acabo de construir un sistema IoT full-stack — desde el frontend hasta el firmware de Arduino — en solo unas horas, y casi no escribí código.
 
 Hace unos días, mi amigo Konrad me mandó un mensaje contándome de una herramienta de IA increíble que había encontrado: [Lovable.dev](https://lovable.dev/), un sitio que crea aplicaciones web **sin escribir código**, solo con prompts. Me dejó impresionado lo bien que generó una landing page simple, así que, por supuesto, tenía que probar hasta dónde podía llegar.
 

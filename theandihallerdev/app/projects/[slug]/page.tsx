@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
 
   return {
-    title: `Post: ${slug}`,
+    title: `${slug}`,
     alternates: {
       canonical: `https://theandihaller.com/projects/${slug}`,
     },
