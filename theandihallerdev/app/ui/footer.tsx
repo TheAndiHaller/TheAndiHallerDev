@@ -11,8 +11,8 @@ export default function Footer() {
     <footer className="mt-auto pt-8 text-center">
       <p className="text-xs mb-8">
         {isSpanish
-          ? "© 2024 Andreas Haller. Todos los derechos reservados. "
-          : "© 2024 Andreas Haller. All Rights Reserved."}
+          ? "© 2025 Andreas Haller. Todos los derechos reservados. "
+          : "© 2025 Andreas Haller. All Rights Reserved."}
       </p>
     </footer>
   );

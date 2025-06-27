@@ -1,6 +1,6 @@
 ---
 title: Countries App
-date: 2025-05-09
+date: 2025-05-08
 slug: countries
 description: Web App construida con React, Redux, Nodejs y Sequelize que muestra información sobre países. Tiene filtros combinados y te permite agregar información. (Backend en Heroku roto).
 image: https://res.cloudinary.com/dzdh345nq/image/upload/v1677718869/git/Screenshot_from_2023-03-01_21-59-37_avdxxo.png

@@ -14,9 +14,6 @@ export const metadata: Metadata = {
   },
   description: "The official web of Andi Haller",
   metadataBase: new URL("https://theandihaller.com"),
-  alternates: {
-    canonical: "https://theandihaller.com/",
-  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,15 @@ import Socials from "../ui/socials";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "../../lib/markdown";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'The Andi Haller',
+  description: 'Sitio web oficial de Andi Haller',
+  alternates: {
+    canonical: 'https://theandihaller.com/es',
+  },
+};
 
 export default async function Home() {
   const projects = getAllPosts("projects", "es").slice(0, 2);
