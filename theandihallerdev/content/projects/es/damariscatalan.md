@@ -6,11 +6,13 @@ description: Sitio web para Damaris Catalán - Personal Stylist & Especialista e
 image: https://res.cloudinary.com/dzdh345nq/image/upload/v1749847460/damariscatalan_zhz6br.png
 ---
 
-
+![Website screenshot 1](https://res.cloudinary.com/dzdh345nq/image/upload/v1749847460/damariscatalan_zhz6br.png "Website")
 
 ### Descripción del proyecto
 
 Tuve el placer de trabajar junto a **Damaris Catalán**, una especialista en personal styling y colorimetría dedicada a empoderar a mujeres profesionales a través de su imagen personal. El objetivo principal fue diseñar una página web clara, profesional y cercana, que reflejara su esencia y comunicara el valor de sus servicios de manera efectiva.
+
+![Website screenshot 2](https://res.cloudinary.com/dzdh345nq/image/upload/v1754060478/git/web_damaris_1_g5qrgh.png "Website")
 
 ### Lo que hice
 
@@ -19,6 +21,8 @@ Tuve el placer de trabajar junto a **Damaris Catalán**, una especialista en per
 - Secciones dinámicas para mostrar **testimonios reales**, **contenido en video**, y una galería de **resultados antes y después**.  
 - Sistema claro para elegir entre sus distintos **programas y servicios**, con descripciones detalladas y llamados a la acción.  
 - Optimización para móviles y experiencia fluida en todos los dispositivos.
+
+![Website screenshot 3](https://res.cloudinary.com/dzdh345nq/image/upload/v1754060478/git/web_damaris_hr7xce.png "Website")
 
 ### Una experiencia muy positiva
 

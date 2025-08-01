@@ -6,11 +6,13 @@ description: Website for Damaris Catalán – Personal Stylist & Colorimetry Exp
 image: https://res.cloudinary.com/dzdh345nq/image/upload/v1749847460/damariscatalan_zhz6br.png
 ---
 
-
+![Website screenshot 1](https://res.cloudinary.com/dzdh345nq/image/upload/v1749847460/damariscatalan_zhz6br.png "Website")
 
 ### Project Description
 
 I had the pleasure of working with **Damaris Catalán**, a personal styling and colorimetry specialist dedicated to empowering professional women through their personal image. The main goal was to design a clean, professional, and approachable website that would reflect her essence and clearly communicate the value of her services.
+
+![Website screenshot 2](https://res.cloudinary.com/dzdh345nq/image/upload/v1754060478/git/web_damaris_1_g5qrgh.png "Website")
 
 ### What I did
 
@@ -19,6 +21,8 @@ I had the pleasure of working with **Damaris Catalán**, a personal styling and 
 - Created dynamic sections to showcase **real client testimonials**, **video content**, and a gallery of **before-and-after transformations**.  
 - Built a clear system for selecting between her **programs and services**, with detailed descriptions and strong calls to action.  
 - Fully responsive and mobile-optimized experience across all devices.
+
+![Website screenshot 3](https://res.cloudinary.com/dzdh345nq/image/upload/v1754060478/git/web_damaris_hr7xce.png "Website")
 
 ### A very positive experience
 
